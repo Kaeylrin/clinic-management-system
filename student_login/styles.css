@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: url('../images/LogIn-BG.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding-left: 5%;
+}
+
+/* Login section */
+.login-section {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.text-wrapper {
+  width: 120%;
+  max-width: 860px;
+  margin-left: 40px;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+}
+
+.text-wrapper h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #324d6b;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.login-caption {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #324d6b;
+  text-align: left;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #3d5975;
+  border-radius: 2px;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 360px;
+}
+
+.input-group .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 14px;
+}
+
+.input-group input {
+  font-size: 16px;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #2c3e50;
+}
+
+.input-group input::placeholder {
+  color: #9aa5b1;
+}
+
+/* Button */
+button {
+  width: 50%;
+  max-width: 360px;
+  padding: 14px 0;
+  background-color: #3d5975;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2e4a63;
+}
+
+/* Fade on page load */
+body {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* Fade-out effect */
+.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}

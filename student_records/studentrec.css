@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f4f6fa;
+    color: #2d3e50;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background: #3a4a68;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px 10px 20px;
+    gap: 10px;
+    border-bottom: 1px solid #4a5a6a;
+}
+
+.menu-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.admin-badge {
+    background: #5e7bb0;
+    color: #fff;
+    padding: 3px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sidebar nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 28px;
+    font-size: 16px;
+    color: #e0e6f0;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: background 0.2s, border 0.2s, color 0.2s;
+    background: transparent;
+}
+
+.sidebar nav ul li .nav-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.sidebar nav ul li span {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+    background: #2d3e50;
+    border-left: 4px solid #b6c6e3;
+    color: #fff;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 36px 36px 0 36px;
+}
+
+h1 {
+    color: #4a5a6a;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.student-form {
+    margin-bottom: 24px;
+    background: #fff;
+    padding: 18px 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(54,89,124,0.07);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.student-form input {
+    flex: 1;
+    min-width: 100px;
+    padding: 8px 10px;
+    border: 1px solid #b6c6e3;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.student-form button {
+    padding: 8px 18px;
+    background: #3a4a68;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.student-form button#cancelEditBtn {
+    background: #aaa;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(54,89,124,0.07);
+}
+
+th, td {
+    padding: 14px 18px;
+    border: 1px solid #dbe3ec;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #e8edf3;
+    color: #3a4a68;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+tr:nth-child(even) td {
+    background-color: #f7fafd;
+}
+
+.action-btn {
+    background: #3a4a68;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-right: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+.action-btn.edit {
+    background: #4a90e2;
+}
+.action-btn.delete {
+    background: #e94e4e;
+}
+.action-btn:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 60px;
+    }
+    .sidebar nav ul li {
+        padding: 14px 10px;
+        font-size: 0;
+    }
+    .sidebar nav ul li .nav-icon {
+        margin-right: 0;
+    }
+    .main-content {
+        margin-left: 60px;
+        padding: 24px 8px 0 8px;
+    }
+    th, td {
+        padding: 10px 8px;
+        font-size: 0.95rem;
+    }
+}

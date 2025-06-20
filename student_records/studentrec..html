@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Record</title>
+    <link rel="stylesheet" href="studentrec.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="icons/menu.png" alt="Menu" class="menu-icon" />
+            <span class="admin-badge">Admin</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <img src="icons/home.png" alt="Home" class="nav-icon" />
+                    <span>Home</span>
+                </li>
+                <li>
+                    <img src="icons/inventory.png" alt="Inventory" class="nav-icon" />
+                    <span>Inventory</span>
+                </li>
+                <li class="active">
+                    <img src="icons/folder.png" alt="Student Files" class="nav-icon" />
+                    <span>Student Files</span>
+                </li>
+                <li>
+                    <img src="icons/logout.png" alt="Logout" class="nav-icon" />
+                    <span>Logout</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <h1>STUDENTS RECORD</h1>
+        <form id="studentForm" autocomplete="off" class="student-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="idno" placeholder="ID No." required>
+            <input type="text" id="program" placeholder="Program" required>
+            <input type="text" id="diagnosis" placeholder="Diagnosis" required>
+            <input type="text" id="visitdate" placeholder="Visit Date" required>
+            <button type="submit" id="submitBtn">Add Student</button>
+            <button type="button" id="cancelEditBtn" style="display:none;background:#aaa;">Cancel</button>
+        </form>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ID No.</th>
+                    <th>Program</th>
+                    <th>Diagnosis</th>
+                    <th>Visit Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student rows will be automatically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="studentrec.js"></script>
+</body>
+</html>

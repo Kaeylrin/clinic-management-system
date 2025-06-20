@@ -1,0 +1,136 @@
+/* Reset default margins and set font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-image: url('../images/ADMIN-BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+/* Positioning the login form directly on background */
+.login-section {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  text-align: center;
+}
+
+/* Heading: Hello Admin! */
+.login-section h2 {
+  font-size: 40px;
+  font-weight: 700; /* Bold */
+  color: #324d6b;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+/* Subheading: Description */
+.login-section p {
+  font-size: 14px;
+  font-weight: 400;
+ color: #324d6b;
+  font-style: italic;
+  margin: 0 auto 10px auto;
+  text-align: left;
+  line-height: 1.5;
+  width: 90%; /* Slight indent appearance */
+  padding-left: 50px; /* Optional: slight visual indent */
+}
+
+.login-caption {
+  font-size: 16px;
+  font-weight: 400;
+  color: #324d6b;
+  font-style: italic;
+  margin: 0 auto 10px auto;
+  text-align: left;
+  line-height: 1.5;
+  width: 90%;
+  padding-left: 40px;
+}
+
+.login-caption .indent {
+  display: inline-block;
+  padding-left: 188px; /* Adjust this value to match the image spacing */
+}
+
+
+/* Input field group */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #3d5975;
+  border-radius: 4px;
+  padding: 14px;
+  margin: 0 auto 40px auto;
+  background-color: #f5fbfc;
+  width: 100%;
+}
+
+/* Input icon image */
+.input-group .icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+}
+
+/* Input fields */
+.input-group input {
+  font-size: 16px;
+  font-weight: 300;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #2c3e50;
+}
+
+/* Placeholder styling */
+.input-group input::placeholder {
+  color: #9aa5b1;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* Login Button */
+button {
+  width: 60%; /* Optional: narrower than full width */
+  padding: 16px 0;
+  background-color: #3d5975;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto; /* Center button */
+}
+
+button:hover {
+  background-color: #2e4a63;
+}
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
